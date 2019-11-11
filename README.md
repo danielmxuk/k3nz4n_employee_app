@@ -3,7 +3,7 @@
 The purpose of this task is create a Web application that exposes REST CRUD operations for employees.
 
 # Features
-  - The app uses Spring boot as run as a microservice
+  - The app uses Spring boot to run as a Microservice
   - It handles execution profiles (prod, dev, test, default)
   - Works with Java 8+ (uses Lambda Expressions, streams, method reference)
   - Implements MVC, DTO design patterns
@@ -55,7 +55,7 @@ There are two users created for this app:
 | kenzanAdmin | kenzanPass | USER, ADMIN |
 | kenzanUser | userPass | USER |
 
-Once logged, the main GUI is showed, from there all the REST API can be tested (using the kenzanAdmin user, because the kenzanUser cannot access the ADMIN role REST API)
+Once logged, the main GUI is showed, from there, all the REST API can be tested (using the kenzanAdmin user, because the kenzanUser cannot access the ADMIN role REST APIs)
 
 [![01](./src/main/resources/app_screenshots/screenshot_employee_app_gui_01.jpg)]
 
