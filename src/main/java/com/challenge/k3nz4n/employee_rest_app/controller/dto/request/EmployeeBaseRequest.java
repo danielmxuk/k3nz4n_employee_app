@@ -1,0 +1,13 @@
+package com.challenge.k3nz4n.employee_rest_app.controller.dto.request;
+
+/**
+ * <pre>
+ * The purpose of this interface is help as base communication DTO for the controller during the endpoints requests
+ * </pre>
+ * @author Daniel Beltran Roman - daniel.beltran-roman@amdocs.com
+ * @since Nov 10, 2019
+ */
+
+public interface EmployeeBaseRequest {
+
+}

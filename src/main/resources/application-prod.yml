@@ -1,0 +1,17 @@
+app:
+  message: "Running PROD profile: showing INFO logging level"
+
+data-source:
+  employee:
+    entries-number-to-load: 300
+
+logging:
+  level:
+    root: "info"
+
+spring:
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false

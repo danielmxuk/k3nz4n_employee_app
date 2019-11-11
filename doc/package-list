@@ -1,0 +1,12 @@
+com.challenge.k3nz4n.employee_rest_app
+com.challenge.k3nz4n.employee_rest_app.config
+com.challenge.k3nz4n.employee_rest_app.controller
+com.challenge.k3nz4n.employee_rest_app.controller.dto.request
+com.challenge.k3nz4n.employee_rest_app.controller.dto.response
+com.challenge.k3nz4n.employee_rest_app.enums
+com.challenge.k3nz4n.employee_rest_app.exception
+com.challenge.k3nz4n.employee_rest_app.model.dto
+com.challenge.k3nz4n.employee_rest_app.model.entity
+com.challenge.k3nz4n.employee_rest_app.model.repository
+com.challenge.k3nz4n.employee_rest_app.model.service
+com.challenge.k3nz4n.employee_rest_app.utility

@@ -1,0 +1,24 @@
+app:
+  message: "Running DEV profile: showing queries and their parameters, and DEBUG logging level"
+
+data-source:
+  employee:
+    entries-number-to-load: 50
+
+logging:
+  level:
+    root: "debug"
+    org:
+      hibernate:
+        SQL: "debug"
+        type:
+          descriptor:
+            sql: "debug"
+
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        

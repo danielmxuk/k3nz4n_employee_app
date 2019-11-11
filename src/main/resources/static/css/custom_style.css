@@ -1,0 +1,57 @@
+
+body {
+	background-color: #586673;
+}
+
+div.formatStyle {
+	display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+/*    font-size: 13px;
+    line-height: 1.42857143;
+    */
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+div.header {
+  background-color: #f5f5f5 !important;
+  background-image: url(../images/gui_header_kenzan.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+span.logout-button {
+	float: right;
+	margin-right: 17px;
+}
+
+button.tab-left{
+	margin-left: 15px;
+}
+
+button.admin-option{
+	margin-left: 15px;
+	color: #c50e0e;
+	font-weight: bold;
+}
+
+pre#response-data-tag {
+	white-space: pre-wrap;
+	height: auto;
+    max-height: 500px;
+    overflow: auto;
+}
+
+button.admin-option:hover{
+	font-weight: bold;
+}
+
+h2, h4, span.employee-options{
+	font-family: Arial,Helvetica,sans-serif;
+}

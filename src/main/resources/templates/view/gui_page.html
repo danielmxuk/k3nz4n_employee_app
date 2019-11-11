@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Employee GUI</title>
+<link rel="stylesheet" media="screen" href="css/custom_style.css">
+<link rel="stylesheet" media="screen" href="css/jquery-ui.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/employee_app/base_functions.js"></script>
+<script type="text/javascript" src="js/employee_app/role_user_functions.js"></script>
+<script type="text/javascript" src="js/employee_app/role_admin_functions.js"></script>
+    
+</head>
+<body>
+<div class="formatStyle header">
+<h2>Welcome <span style="color:#586673" th:text="${clientId}"></span> to the Employee GUI</h2>
+<br>
+<span class="employee-options">Authority roles: <span style="color:#586673" th:text="${clientAuthorities}"></span></span>
+<br>
+<span class="employee-options">Available Employee options for you:</span>
+<br><br>
+<button class="ui-button ui-widget ui-corner-all" onclick="viewJWTForSession()">Get JWT</button>
+
+<button class="ui-button ui-widget ui-corner-all tab-left" onclick="getAllActiveEmployeesRequest()">Show All</button>
+<button class="ui-button ui-widget ui-corner-all tab-left" onclick="postEmployeeGUI()">New</button>
+<button class="ui-button ui-widget ui-corner-all tab-left" onclick="getFindEmployeeGUI()">Find</button>
+<button class="ui-button ui-widget ui-corner-all tab-left" onclick="putUpdateEmployeeGUI()">Update</button>
+
+<span th:if="${#strings.contains(clientAuthorities, 'ADMIN')}">
+	<button class="ui-button ui-widget ui-corner-all tab-left admin-option" onclick="getAllInactiveEmployeesRequest()">Show All Inactive</button> 
+	<button class="ui-button ui-widget ui-corner-all tab-left admin-option" onclick="patchEmployeeActiveStatusGUI(true)">Activate</button> 
+	<button class="ui-button ui-widget ui-corner-all tab-left admin-option" onclick="patchEmployeeActiveStatusGUI(false)">Deactivate</button> 
+	<button class="ui-button ui-widget ui-corner-all tab-left admin-option" onclick="deleteEmployeeGUI()">Delete</button> 
+</span>
+
+<span class="logout-button">
+<button class="ui-button ui-widget ui-corner-all" onclick="logoutApp()">Logout</button> 
+</span>
+</div>
+<br>
+<br>
+<div class="formatStyle">
+<div id="request-data-tag"></div>
+<pre id="response-data-tag"></pre>
+</div>
+<input type="hidden" id="client-id" name="client-id" value="" th:value="${clientId}" />
+<input type="hidden" id="client-secret" name="client-secret" value="" th:value="${clientSecret}" />
+<input type="hidden" id="app-uri" name="app-uri" value="" th:value="${appURI}" />
+</body>
+</html>
